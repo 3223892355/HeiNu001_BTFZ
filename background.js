@@ -536,7 +536,7 @@ function inferCompanyFromDomain(host) {
 
 // 查询公司地区
 async function handleQueryRegion(companyName) {
-    const AMAP_API_KEY = 'XXXXXXXXXXXXXXXXX'; //替换为你自己的api key
+    const AMAP_API_KEY = 'e14c9e8fae0d5b1c7937e5c197d8480f'; 
     
     try {
         const response = await fetch(
