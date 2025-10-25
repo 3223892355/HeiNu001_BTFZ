@@ -255,7 +255,8 @@ A: 检查：
 ## ☕ 赞赏
 
 如果你觉得这个项目帮助到了你，你可以打赏一个馒头以资鼓励
-<img width="520" height="750" alt="image" src="https://github.com/user-attachments/assets/58bfcab0-5a64-4d58-8cab-d96d378bf095" />
+
+<img width="520" height="750" alt="image" src="https://github.com/user-attachments/assets/58bfcab0-5a64-4d58-8cab-d96d378bf095" style="float: left; margin-right: 20px;" />
 
 ---
 
