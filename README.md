@@ -252,6 +252,11 @@ A: 检查：
 - [爱站网](https://www.aizhan.com/)
 - [站长之家](https://www.chinaz.com/)
 
+## ☕ 赞赏
+
+如果你觉得这个项目帮助到了你，你可以打赏一个馒头以资鼓励
+![25806c4a47dc5d721562923e89c7a538](https://github.com/user-attachments/assets/58bfcab0-5a64-4d58-8cab-d96d378bf095)
+
 ---
 
 **⭐ 如果这个项目对你有帮助，请给个Star支持一下！**
