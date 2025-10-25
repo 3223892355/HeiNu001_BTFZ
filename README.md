@@ -6,7 +6,7 @@
 
 > 🚀 专为补天平台设计的漏洞提交助手，支持一键识别、自动填充、智能模板等功能，大幅提升漏洞提交效率。
 
-📸 界面截图
+## 📸 界面截图
 <img width="520" height="750" alt="image" src="https://github.com/user-attachments/assets/192b8e17-7b59-4303-a955-dda6a2c1b065" />
 
 ## ✨ 功能特点
