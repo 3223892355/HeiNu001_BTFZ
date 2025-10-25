@@ -34,7 +34,7 @@
 
 1. **下载项目**
    ```bash
-   git clone https://github.com/your-username/butian-helper-extension.git
+   git clone https://github.com/3223892355/HeiNu001_BTFZ.git
    cd butian-helper-extension
    ```
 
