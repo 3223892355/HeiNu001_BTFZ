@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>补天漏洞提交助手</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&family=Rajdhani:wght@400;500&display=swap');
+
+        body {
+            width: 400px;
+            min-height: 500px;
+            margin: 0;
+            padding: 0;
+            font-family: 'Rajdhani', 'Orbitron', 'Segoe UI', sans-serif;
+            background: radial-gradient(circle at top, #141b2d 0%, #07090f 45%, #03040a 100%);
+            color: #d4f1ff;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #06d9ff 0%, #7b2ff7 100%);
+            color: #0a0c14;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 0 15px rgba(123, 47, 247, 0.5);
+        }
+        
+        .content {
+            padding: 18px;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+            background: rgba(9, 13, 25, 0.85);
+            border-radius: 12px;
+            padding: 16px;
+            border: 1px solid rgba(6, 217, 255, 0.25);
+            box-shadow: 0 0 15px rgba(6, 217, 255, 0.15), 0 0 35px rgba(123, 47, 247, 0.15);
+            backdrop-filter: blur(4px);
+        }
+        
+        .section h3 {
+            margin: 0 0 15px 0;
+            color: #7ce8ff;
+            font-size: 14px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 8px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .form-group {
+            margin-bottom: 12px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #9fc9ff;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid rgba(123, 47, 247, 0.4);
+            border-radius: 6px;
+            font-size: 13px;
+            box-sizing: border-box;
+            background: rgba(6, 10, 20, 0.85);
+            color: #e7faff;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #06d9ff;
+            box-shadow: 0 0 12px rgba(6, 217, 255, 0.3);
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(120deg, #7b2ff7 0%, #2fd4ff 100%);
+            color: #05070f;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            box-shadow: 0 0 15px rgba(47, 212, 255, 0.35);
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 20px rgba(123, 47, 247, 0.45);
+        }
+        
+        .btn:disabled {
+            background: rgba(255,255,255,0.2);
+            cursor: not-allowed;
+            box-shadow: none;
+            color: rgba(255,255,255,0.4);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(120deg, #0f97ff 0%, #00ffc6 100%);
+            color: #04121c;
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 0 0 20px rgba(0, 255, 198, 0.35);
+        }
+        
+        .status {
+            padding: 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            text-align: center;
+            border: 1px solid transparent;
+        }
+        
+        .status.success {
+            background: rgba(13, 255, 199, 0.12);
+            color: #2effd5;
+            border-color: rgba(46, 255, 213, 0.4);
+        }
+        
+        .status.error {
+            background: rgba(255, 75, 98, 0.12);
+            color: #ff768a;
+            border-color: rgba(255, 118, 138, 0.4);
+        }
+        
+        .status.info {
+            background: rgba(6, 217, 255, 0.12);
+            color: #4ce8ff;
+            border-color: rgba(76, 232, 255, 0.35);
+        }
+        
+        .switch {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .switch input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 8px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+            text-align: center;
+            font-size: 12px;
+            color: #9fc9ff;
+            text-transform: uppercase;
+        }
+        
+        .tab.active {
+            background: rgba(123, 47, 247, 0.3);
+            border-color: rgba(6, 217, 255, 0.6);
+            color: #fff;
+            box-shadow: inset 0 0 8px rgba(6, 217, 255, 0.4);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        补天漏洞提交助手
+    </div>
+    
+    <div class="content">
+        <div class="section">
+            <h3>URL自动识别</h3>
+            <div class="form-group">
+                <label>输入漏洞URL进行自动识别</label>
+                <input type="text" id="autoUrl" placeholder="https://example.com/path">
+            </div>
+            <button class="btn" id="autoDetectBtn">自动识别并填充</button>
+            <button class="btn btn-secondary" id="manualSyncBtn">手动同步到补天</button>
+            <div id="autoStatus" class="status info" style="display: none;"></div>
+        </div>
+        
+        <div class="section">
+            <h3>基本配置</h3>
+            <div class="form-group">
+                <label>漏洞类型</label>
+                <select id="vulnType">
+                    <option value="0">请选择</option>
+                    <option value="1">XSS</option>
+                    <option value="67">弱口令</option>
+                    <option value="28">文件上传</option>
+                    <option value="10">信息泄露</option>
+                    <option value="8">逻辑漏洞</option>
+                    <option value="3">命令执行</option>
+                    <option value="2">SQL注入</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>参与活动</label>
+                <select id="activeId">
+                    <option value="">请选择</option>
+                    <option value="163">【2025专属SRC全年积分挑战赛】</option>
+                    <option value="181">2025GROW计划第二期-老白帽</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>厂商名称</label>
+                <input type="text" id="companyName">
+            </div>
+            <div class="form-group">
+                <label>域名或IP</label>
+                <input type="text" id="host">
+            </div>
+            <div class="form-group">
+                <label>漏洞类别</label>
+                <select id="category">
+                    <option value="1">Web漏洞</option>
+                    <option value="8">App漏洞</option>
+                    <option value="7">IoT漏洞</option>
+                    <option value="9">工控漏洞</option>
+                    <option value="10">操作系统及通用软件漏洞</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>漏洞权重</label>
+                <select id="weight">
+                    <option value="1" selected>权重≥1</option> 
+                    <option value="0">权重=0</option> 
+                </select>
+            </div>
+            <div class="form-group">
+                <label>漏洞标题</label>
+                <input type="text" id="title">
+            </div>
+            <div class="form-group">
+                <label>漏洞URL (多个用逗号分隔)</label>
+                <input type="text" id="urls">
+            </div>
+            <div class="form-group">
+                <label>简要描述</label>
+                <textarea id="description"></textarea>
+            </div>
+            <div class="form-group">
+                <label>修复方案</label>
+                <textarea id="repairSuggest"></textarea>
+            </div>
+            <div class="form-group">
+                <label>所属地区 (省份/市/县，用/分隔)</label>
+                <input type="text" id="region" placeholder="如江苏省徐州市云龙区">
+            </div>
+            <div class="form-group">
+                <label>厂商联系方式</label>
+                <input type="text" id="companyContact">
+            </div>
+        </div>
+        
+        <div class="section">
+            <button class="btn btn-secondary" id="resetBtn">重置配置</button>
+        </div>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>

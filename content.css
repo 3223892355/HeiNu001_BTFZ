@@ -1,0 +1,300 @@
+/* content.css - 内容脚本样式 */
+.butian-helper-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    width: 400px;
+    max-height: 90vh;
+    overflow: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+}
+
+.butian-helper-panel.fullscreen {
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    right: auto !important;
+    max-height: none !important;
+}
+
+.butian-helper-title-bar {
+    background: #007bff;
+    color: white;
+    padding: 12px 15px;
+    cursor: move;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+    font-weight: 500;
+}
+
+.butian-helper-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.butian-helper-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.butian-helper-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.butian-helper-switch {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.butian-helper-switch:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.butian-helper-switch-slider {
+    width: 36px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.3s;
+}
+
+.butian-helper-switch-slider::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+.butian-helper-switch-slider.active {
+    background: #28a745;
+}
+
+.butian-helper-switch-slider.active::before {
+    left: 18px;
+}
+
+.butian-helper-content {
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.butian-helper-minimized .butian-helper-content {
+    display: none;
+}
+
+.butian-helper-section {
+    margin-bottom: 20px;
+}
+
+.butian-helper-section h3 {
+    margin: 0 0 15px 0;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+}
+
+.butian-helper-form-group {
+    margin-bottom: 15px;
+}
+
+.butian-helper-form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+    font-size: 13px;
+}
+
+.butian-helper-form-group input,
+.butian-helper-form-group select,
+.butian-helper-form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.butian-helper-form-group input:focus,
+.butian-helper-form-group select:focus,
+.butian-helper-form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+.butian-helper-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.butian-helper-btn-primary {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+}
+
+.butian-helper-btn-primary:hover {
+    background: #0056b3;
+}
+
+.butian-helper-btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.butian-helper-status {
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.butian-helper-status.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.butian-helper-status.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.butian-helper-status.info {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.butian-helper-tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.butian-helper-tab {
+    flex: 1;
+    padding: 12px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.butian-helper-tab:first-child {
+    border-radius: 6px 0 0 0;
+}
+
+.butian-helper-tab:last-child {
+    border-radius: 0 6px 0 0;
+}
+
+.butian-helper-tab.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.butian-helper-tab-content {
+    display: none;
+}
+
+.butian-helper-tab-content.active {
+    display: block;
+}
+
+.butian-helper-checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.butian-helper-checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .butian-helper-panel {
+        width: 90vw;
+        right: 5vw;
+        left: 5vw;
+    }
+    
+    .butian-helper-panel.fullscreen {
+        width: 100vw !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+}
+
+/* 滚动条样式 */
+.butian-helper-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.butian-helper-panel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.butian-helper-panel::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.butian-helper-panel::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
