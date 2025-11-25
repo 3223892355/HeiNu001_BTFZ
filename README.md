@@ -1,8 +1,8 @@
-# 补天漏洞提交助手-v2.0.0 - 浏览器插件版
+# 补天漏洞提交助手 - 浏览器插件版
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-2.0.0-purple.svg)](https://github.com/your-username/butian-helper-extension)
+[![Version](https://img.shields.io/badge/Version-1.0.0-orange.svg)](https://github.com/your-username/butian-helper-extension)
 
 > 🚀 专为补天平台设计的漏洞提交助手，支持一键识别、自动填充、智能模板等功能，大幅提升漏洞提交效率。
 
@@ -10,11 +10,9 @@
 
 > 公众号文章链接：https://mp.weixin.qq.com/s/CbXt7W08sb5KQInZNAQosw
 
+ ## 📸 界面截图
 
-
-## 📸 界面截图
-
-<img width="519" height="750" alt="image" src="https://github.com/user-attachments/assets/2e69e61d-d5d5-4b55-9e74-99af954ae091" />
+<img width="540" height="763" alt="image" src="https://github.com/user-attachments/assets/c8f24581-c96b-44b5-8d46-0836ac7fd6cd" />
 
 
 ## ✨ 功能特点
@@ -24,10 +22,8 @@
 - **🔍 URL自动识别**：输入漏洞URL，自动识别厂商名称、域名、地区信息
 - **📝 智能模板**：7种常用漏洞类型模板，自动填充标题、描述、修复方案
 - **🌍 地区查询**：使用高德API自动查询厂商所在地区，支持直辖市智能处理
-- **⚡ 一键应用+手动同步**：支持一键识别并直接应用到补天平台表单，也可在修改数据后手动同步
-- **🎛️ 表单记忆**：弹窗内容实时自动保存，关闭后再次打开仍可继续编辑
-- **🛰️ 动态活动识别**：自动读取补天平台当前可参加的活动列表并展示
-- **🌌 赛博朋克UI**：全新霓虹赛博风界面，更清晰的状态反馈与交互
+- **⚡ 一键应用**：自动识别并直接应用到补天平台表单
+- **🎨 简洁界面**：优化后的用户界面，操作简单直观
 
 ### 🛡️ 漏洞类型支持
 
@@ -103,11 +99,6 @@
    - 点击"自动识别并填充"按钮
    - 插件自动完成：识别→填充→应用
 
-4. **手动同步（可选）**
-   - 修改弹窗内任意字段
-   - 点击“手动同步到补天”按钮
-   - 当前配置立即写入补天提交页面
-
 ### 详细操作步骤
 
 #### 🔍 URL自动识别
@@ -153,10 +144,9 @@
 #### ⚙️ 配置选项
 
 - **漏洞权重**：默认"权重≥1"，可调整为"权重=0"
-- **参与活动**：插件从补天页面实时读取可选活动
+- **参与活动**：可选择参与的活动（可选）
 - **厂商信息**：自动识别或手动填写
 - **地区信息**：自动查询，支持直辖市智能处理
-- **表单记忆**：所有字段自动保存，重新打开插件可继续编辑
 
 ## 🔧 技术特性
 
@@ -246,24 +236,7 @@ A: 检查：
 
 ## 🚀 更新日志
 
-### v2.0.0 (2025-11-25)
-
-- ✨ 弹窗内容实时保存，关闭后再次打开仍可保留
-- 🔁 新增“手动同步到补天”按钮，随时推送最新配置
-- 🛰️ 自动解析补天页面活动列表，防止选择到无权限活动
-- 🎨 全新赛博朋克风UI与状态反馈
-- 🧠 模板联动改进：根据漏洞类型生成对应标题/描述/修复建议
-
-#### v2.0.0 更新详情
-
-- 新功能：
-  - 自动保存表单数据，支持手动同步按钮
-  - 动态解析补天活动列表，界面焕新为赛博朋克风
-- Bug 修复：
-  - 模板联动导致标题/描述固定为 SQL 注入的问题
-  - 内容脚本填充顺序导致描述被覆盖的问题
-
-### v1.0.0 (2025-10-25)
+### v1.0.0 (2025-11-25)
 
 - ✨ 初始版本发布
 - 🔍 支持URL自动识别
@@ -271,14 +244,6 @@ A: 检查：
 - 🌍 支持地区自动查询
 - ⚡ 支持一键应用配置
 - 🎨 优化用户界面
-
-#### v1.0.0 更新详情
-
-- 新功能：
-  - URL 自动识别、厂商/地区查询、一键填充
-  - 7 种漏洞类型模板与修复建议
-- Bug 修复：
-  - 首个版本发布，无历史缺陷
 
 ## 🤝 贡献指南
 
@@ -298,17 +263,14 @@ A: 检查：
 - 添加适当的注释
 - 保持代码简洁
 
-## 📄 许可证
-
-本项目采用 [MIT License](LICENSE) 许可证。
 
 ## 📞 联系方式
 
 如有问题或建议，请通过以下方式联系：
 
-- 🐛 **Bug报告**：[GitHub Issues](https://github.com/your-username/butian-helper-extension/issues)
-- 💡 **功能建议**：[GitHub Discussions](https://github.com/your-username/butian-helper-extension/discussions)
-- 📧 **邮箱**：your-email@example.com
+- 🐛 **Bug报告**：[GitHub Issues](https://github.com/3223892355/HeiNu001_BTFZ/issues)
+- 💡 **功能建议**：[GitHub Discussions](https://github.com/3223892355/HeiNu001_BTFZ/issues)
+- 📧 **邮箱**：3223892355@qq.com
 
 ## 🙏 致谢
 
