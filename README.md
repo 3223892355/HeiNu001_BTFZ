@@ -298,17 +298,14 @@ A: 检查：
 - 添加适当的注释
 - 保持代码简洁
 
-## 📄 许可证
-
-本项目采用 [MIT License](LICENSE) 许可证。
 
 ## 📞 联系方式
 
 如有问题或建议，请通过以下方式联系：
 
-- 🐛 **Bug报告**：[GitHub Issues](https://github.com/your-username/butian-helper-extension/issues)
-- 💡 **功能建议**：[GitHub Discussions](https://github.com/your-username/butian-helper-extension/discussions)
-- 📧 **邮箱**：your-email@example.com
+- 🐛 **Bug报告**：[GitHub Issues](https://github.com/3223892355/HeiNu001_BTFZ/issues)
+- 💡 **功能建议**：[GitHub Discussions](https://github.com/3223892355/HeiNu001_BTFZ/issues)
+- 📧 **邮箱**：3223892355@qq.com
 
 ## 🙏 致谢
 
