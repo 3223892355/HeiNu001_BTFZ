@@ -1,4 +1,4 @@
-# 补天漏洞提交助手 - 浏览器插件版
+# 补天漏洞提交助手-v1.0.0 - 浏览器插件版
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
